@@ -1,0 +1,11 @@
+# Compiled binaries
+*.exe
+*.out
+*.o
+
+# Debug files
+*.dSYM/
+
+# OS files
+.DS_Store
+Thumbs.db
