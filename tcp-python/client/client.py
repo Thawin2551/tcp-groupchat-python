@@ -18,19 +18,23 @@ def receive_message():
             else: # if the keyword not NICK 
                 print(message)
         except:
-            # if error occur
+            # if an error occur
             print("An error occured !")
             client.close()
             break
 
 def write_message():
     while True:
-        message = f"{nickname}: {input('')}"
-        client.send(message.encode("ascii"))
+        message = input("")
+        if message.startswith("/pm "):
+            client.send(message.encode("ascii"))
+        else:
+            client.send(f"{nickname}: {message}".encode("ascii"))
         
-
+# create new thread after receive message
 receive_thread = threading.Thread(target=receive_message)
 receive_thread.start()
 
+# create new thread after user write the message 
 write_thread = threading.Thread(target=write_message)
 write_thread.start()
