@@ -50,7 +50,7 @@ python3 client.py
 \`\`\`
 
 ## Testing & Evidence
-- ![TCP test screenshot](tcp-python/tcp-test.png)
+![TCP test screenshot](tcp-python/tcp-test.png)
 - Wireshark (CLI) capture result while client connect and send message to each other
 
 ## Bugs Found & Fixed
