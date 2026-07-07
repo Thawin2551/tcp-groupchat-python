@@ -50,8 +50,8 @@ python3 client.py
 \`\`\`
 
 ## Testing & Evidence
-- <img src="image/tcp-test.png">
-- Wireshark capture result while client connect and send message to each other
+- ![TCP test screenshot](image/tcp-test.png)
+- Wireshark (CLI) capture result while client connect and send message to each other
 
 ## Bugs Found & Fixed
 - Fix clients.close() to client.close()
