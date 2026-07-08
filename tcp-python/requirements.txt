@@ -1,0 +1,4 @@
+cffi==2.1.0
+cprint==1.2.2
+cryptography==49.0.0
+pycparser==3.0
