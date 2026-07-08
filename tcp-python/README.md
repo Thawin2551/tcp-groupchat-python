@@ -53,10 +53,12 @@ python3 server.py
 python3 client.py
 \`\`\`
 
-## Testing & Evidence
-![TCP test screenshot](tcp-python/image/tcp-test.png)
+## Testing & Project Screenshot
+![TCP test screenshot](tcp-python/tcp-test.png)
 - Wireshark (CLI) capture result while client connect and send message to each other
-![Private Message Chat]()
+
+![Private Message Feature](tcp-python/private_message_feature.png)
+- Private Message Chat between 2 people
 
 ## Bugs Found & Fixed
 - Fix clients.close() to client.close()
