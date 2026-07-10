@@ -1,4 +1,5 @@
 # TCP Group Chat (Python)
+![Chat Diagram](chat_diagram.png)
 
 ## Overview
 The purpose of this project is hands-on throught the networking theory 
