@@ -1,25 +1,6 @@
 # TCP Group Chat (Python)
-- Using claude to generate the diagram
+- Using Claude to generate diagram
 ![Chat Diagram](chat_diagram.png)
-# Example of flowchart 
-
-## Message Sequence: Client A →t Server → Client B
-
-```mermaid
-sequenceDiagram
-    participant A as Client A
-    participant SA as Server (Handler Thread A)
-    participant B as Client B
-
-    Note over A: User types "I love NaCL eiei"
-
-    A->>SA: write_message()<br/>socket.send(username, message)
-    SA->>SA: recv()
-    SA->>SA: broadcast() / send_private()
-    SA->>B: socket.send(username, message)
-    B->>B: receive_message()<br/>recv()
-    B->>B: Print "A: I love NaCL eiei"
-```
 
 ## Overview
 The purpose of this project is hands-on throught the networking theory 
