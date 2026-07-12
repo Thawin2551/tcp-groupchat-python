@@ -3,35 +3,23 @@
 ![Chat Diagram](chat_diagram.png)
 # Example of flowchart 
 
-Client A
----------
-write_message() (assume the message is "i love NaCL eiei")
-      |
-      | socket.send()
-      v
-==================== TCP ====================
-      |
-      v
-Server
-------
-Handler Thread A
-      |
-      | recv()
-      |
-      +--> broadcast()/send_private()
-               |
-               | socket.send() to B's socket
-               v
-==================== TCP ====================
-               |
-               v
-Client B
----------
-receive_message()
-      |
-      | recv()
-      |
-      +--> print("A: I love NaCL eiei")
+## Message Sequence: Client A →t Server → Client B
+
+```mermaid
+sequenceDiagram
+    participant A as Client A
+    participant SA as Server (Handler Thread A)
+    participant B as Client B
+
+    Note over A: User types "I love NaCL eiei"
+
+    A->>SA: write_message()<br/>socket.send(username, message)
+    SA->>SA: recv()
+    SA->>SA: broadcast() / send_private()
+    SA->>B: socket.send(username, message)
+    B->>B: receive_message()<br/>recv()
+    B->>B: Print "A: I love NaCL eiei"
+```
 
 ## Overview
 The purpose of this project is hands-on throught the networking theory 
